@@ -4,7 +4,7 @@ SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 . ${SCRIPT_DIR}/func.sh
 
 stack_resolver() {
-  local DEFAULT_RESOLVER=lts
+  local DEFAULT_RESOLVER=lts-8.14
   local CONFIGURED
 
   CONFIGURED=$(awk '{if ($1 == "resolver:") {print $2}}' "$1") \
